@@ -4,7 +4,7 @@ services:
     volumes:
       - ./myapp/db:/var/lib/postgresql/data
     environment:
-      POSTGRES_PASSWORD: <%= ENV['OPEN-FLIGHTS_DATABASE_PASSWORD'] %>
+      POSTGRES_PASSWORD: password
   web:
     build: .
     volumes:
