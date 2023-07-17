@@ -3,7 +3,7 @@ default: &default
   encoding: unicode
   host: db
   username: open-flights
-  password: <%= ENV['OPEN_FLIGHTS_DATABASE_PASSWORD'] %>
+  password: password
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
