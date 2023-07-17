@@ -2,7 +2,8 @@ default: &default
   adapter: postgresql
   encoding: unicode
   host: db
-  #password: <%= ENV['OPEN-FLIGHTS_DATABASE_PASSWORD'] %>
+  username: open-flights
+  password: <%= ENV['OPEN_FLIGHTS_DATABASE_PASSWORD'] %>
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
@@ -18,7 +19,7 @@ test:
 production:
   <<: *default
   database: open-flights_production
-  username: open-flights
-  password: <%= ENV['OPEN_FLIGHTS_DATABASE_PASSWORD'] %>
+  #username: open-flights
+ # password: <%= ENV['OPEN_FLIGHTS_DATABASE_PASSWORD'] %>
   
   
