@@ -1,10 +1,13 @@
+
 services:
   db:
     image: postgres
     volumes:
-      - ./myapp/db:/var/lib/postgresql/data
+      - .:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: password
+  redis:
+    image: redis
   web:
     build: .
     volumes:
@@ -14,3 +17,4 @@ services:
       - "3000:3000"
     depends_on:
       - db
+      - redis
