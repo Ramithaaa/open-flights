@@ -5,6 +5,7 @@ services:
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
     environment:
+      DATABASE_HOST: db
       POSTGRES_PASSWORD: password
   redis:
     image: redis
