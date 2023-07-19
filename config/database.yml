@@ -20,7 +20,7 @@ production:
   <<: *default
   database: open-flights_production
   username: open-flights
-  password: mypass
+  password: <%= ENV['OPEN-FLIGHTS_DATABASE_PASSWORD'] %>
   #password: password
   
   
